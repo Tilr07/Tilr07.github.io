@@ -6,6 +6,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
         <link rel="stylesheet" href="Style.css">
+        <script src="script.js"></script>
         <title>TicTacToe</title>
     </head>
     <body>
@@ -18,25 +19,25 @@
 
 
             <div class="row border-b">
-                <div id="0" class="col border-r"><ion-icon name="ellipse-outline"></ion-icon></div>
-                <div id="1" class="col border-r"><ion-icon name="close-circle-outline"></ion-icon></div>
-                <div id="2" class="col"></div>
+                <div onclick="handleclick('0')" id="0" class="col border-r"></div>
+                <div onclick="handleclick('1')" id="1" class="col border-r"></div>
+                <div onclick="handleclick('2')" id="2" class="col"></div>
             </div>
             <div class="row border-b">
-                <div id="3" class="col border-r"></div>
-                <div id="4" class="col border-r"></div>
-                <div id="5" class="col"></div>
+                <div onclick="handleclick('3')" id="3" class="col border-r"></div>
+                <div onclick="handleclick('4')" id="4" class="col border-r"></div>
+                <div onclick="handleclick('5')" id="5" class="col"></div>
             </div>
             <div class="row">
-                <div id="6" class="col border-r"></div>
-                <div id="7" class="col border-r"></div>
-                <div id="8" class="col"></div>
+                <div onclick="handleclick('6')" id="6" class="col border-r"></div>
+                <div onclick="handleclick('7')" id="7" class="col border-r"></div>
+                <div onclick="handleclick('8')" id="8" class="col"></div>
             </div>
             </div>
         </div>
-        <div class="footer">
-           Bereit zum spielen 
-           <ion-icon id="reset" name="refresh-sharp"></ion-icon>
+        <div class="footer" id="card">
+           <div id="status">Bereit zum spielen</div>
+           <ion-icon id="reset"onclick="reset();" name="refresh-sharp"></ion-icon>
         </div>
     </body>
 </html>
